@@ -4,28 +4,20 @@ var authWindow;
 var menu = document.getElementById('importer-menu');
 var gContacts = document.getElementById('google-contacts');
 
-document.getElementById('importGoogle').addEventListener(
-  'click', function(evt) {
-    var port = '';
-    if (window.location.port != '') {
-      port = ':' + window.location.port;
-    }
-    authWindow = window.open(googleAuth);
-    window.addEventListener('message', function onMessage(evt) {
-      authWindow.close();
-
-      if (evt.data.error) {
-        //Cancelled, we could show a message
-        return;
-      }
-
-      menu.classList.add('hide');
-      gContacts.classList.remove('hide');
-
-      google.auth.init(evt.data.access_token);
-
-      google.contacts.fetchContacts();
+document.getElementById('browser').addEventListener(
+  'click', function(evt) {    
+        var sdcard = navigator.getDeviceStorage('sdcard');
+ 
+var request = sdcard.get("contacts.ldif");
+ 
+request.onsuccess = function () {
+  var file = this.result;
+  console.log("Get the file: " + file.name);
+};
+ 
+request.onerror = function () {
+  console.warn("Unable to get the file: " + this.error);
+};
     });
-});
 
-document.getElementById('importButton').addEventListener('click', function(evt) { google.contacts.importContacts(); });
+document.getElementById('importButton').addEventListener('click', function(evt) { /* TODO : the parse and import */ });

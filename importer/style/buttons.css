@@ -1,7 +1,9 @@
 /* ----------------------------------
  * Buttons
  * ---------------------------------- */
-
+#browser {
+  background: url(images/import_sd.png) no-repeat;
+}
 .button::-moz-focus-inner,
 a[role="button"]::-moz-focus-inner,
 button::-moz-focus-inner {

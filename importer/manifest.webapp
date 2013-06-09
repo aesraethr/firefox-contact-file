@@ -1,6 +1,6 @@
 {
   "name": "Contact file Importer",
-  "description": "Import your contacts from a file to Firefox OS",
+  "description": "Import your contacts from a ldif file to Firefox OS",
   "launch_path": "/index.html",
   "type": "privileged",
   "developer": {
@@ -14,7 +14,7 @@
   },
   "default_locale": "en-US",
   "icons": {
-    "60": "/style/icons/icon.png",
-    "120": "/style/icons/icon.png"
+    "60": "/style/images/import_sd.png",
+    "128": "/style/images/import_sd@2x.png"
   }
 }

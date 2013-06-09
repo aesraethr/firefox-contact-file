@@ -1,7 +1,7 @@
 firefoxos-contacts-importer
 ===========================
 
-Import your contacts from sdcard to Firefox OS.
+Import your contacts from sdcard ldif file to Firefox OS.
 
 # How to make it work
 
@@ -17,4 +17,4 @@ contacts that have a phone number.
 This last option is recommended as long as you will have contacts just with email
 address and so on.
 
-It allows you to import contact from an export from any source (ie: thunderbird, google, ios contacts...)
+It allows you to import contact from an export from ldif source (ie: thunderbird...)
